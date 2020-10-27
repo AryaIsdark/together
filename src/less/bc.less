@@ -1,0 +1,39 @@
+@import './fonts.less';
+@import (reference) './colors.less';
+@import (reference) './utilities.less';
+@import (reference) './variables.less';
+
+.ant-table-row:nth-child(even) > td {
+  background-color: @background-color-zebra-even;
+}
+
+.ant-table-row:nth-child(odd) > td {
+  background-color: @background-color-zebra-odd;
+}
+
+.ant-pagination {
+  margin-top: @padding-md !important;
+  margin-bottom: @padding-md !important;
+  text-align: center;
+}
+
+.ant-input[disabled],
+.ant-select-disabled {
+  color: @text-color !important;
+}
+
+label {
+  display: block;
+  padding-top: 0.5em;
+
+  .ant-divider + &,
+  .ant-divider + * & {
+    padding-top: 0;
+  }
+}
+
+.scrollable .ant-table-wrapper {
+  .ant-pagination {
+    display: none;
+  }
+}

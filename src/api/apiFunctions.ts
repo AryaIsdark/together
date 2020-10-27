@@ -1,0 +1,26 @@
+import { api } from "./client";
+
+export const getPosts = (params: any = {}) => api.get<any>("/posts", params);
+
+export const getPost = (id: string) => api.get<any>(`/posts/${id}`);
+export const getUsers = (params: any = {}) => api.get<any>(`/users`);
+export const getAttendees = (challengeId: string | undefined) =>
+  api.get<any>(`/challenges/${challengeId}/attendees`);
+
+export const getChallenges = (params: any = {}) => api.get<any>(`/challenges`);
+export const getChallenge = (id: string = "") =>
+  api.get<any>(`/challenges/${id}`);
+export const updateChallenge = (id: string = "", params: any) =>
+  api.put<any>(`/challenges/${id}`, params);
+
+export const getComments = (entityType: string, entityId: string) =>
+  api.get<any>(`/${entityType}/${entityId}/comments`);
+
+export const postBooking = (params: any) => {
+  api.post("/bookings", params);
+};
+
+export const getBookings = (params: any) => api.get<any>(`/bookings`, params);
+
+export const getLoggedInUser = (userId: string) =>
+  api.get<any>(`/users/${userId}`);

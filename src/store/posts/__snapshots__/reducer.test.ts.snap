@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`store/posts/reducer can set error 1`] = `
+Object {
+  "data": Array [],
+  "hasError": true,
+  "isLoading": false,
+}
+`;
+
+exports[`store/posts/reducer can set loading 1`] = `
+Object {
+  "data": Array [],
+  "hasError": false,
+  "isLoading": true,
+}
+`;

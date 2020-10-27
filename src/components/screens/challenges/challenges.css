@@ -1,0 +1,38 @@
+.challenge-item {
+  width: 100%;
+  max-width: 500px;
+  max-height: 600px;
+  min-height: 400px;
+  background-size: cover;
+  position: relative;
+  margin: 16px;
+  box-shadow: 0 0 5px silver;
+}
+
+.challenge-item-title {
+  font-size: 1.5em;
+  background-color: #ffffffdb;
+  position: absolute;
+  padding: 10px;
+  width: 250px;
+  height: 151px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.challenge-item-price {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2em;
+  background: #ffffffb8;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: black;
+}

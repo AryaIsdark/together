@@ -1,0 +1,70 @@
+{
+  "name": "react-web-app-starter-pack",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.26.7",
+    "apisauce": "^1.1.1",
+    "history": "^4.10.1",
+    "i18next": "^17.0.18",
+    "i18next-browser-languagedetector": "^4.0.0",
+    "i18next-sprintf-postprocessor": "^0.2.2",
+    "i18next-xhr-backend": "^3.0.0",
+    "jest": "^24.9.0",
+    "moment": "^2.24.0",
+    "prettier": "^1.18.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-i18next": "^10.13.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "redux": "^4.0.4",
+    "redux-devtools": "^3.5.0",
+    "redux-thunk": "^2.3.0",
+    "typecheck": "^0.1.2",
+    "typescript": "^3.6.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test-ci": "set CI=true && react-scripts test --coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "cross-env set CI=true react-scripts test --coverage"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "moduleRoots": "src",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.7.12",
+    "@types/react": "^16.9.6",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-redux": "^7.1.4",
+    "@types/react-router-dom": "^5.1.0",
+    "cross-env": "^6.0.3",
+    "husky": "^3.0.9",
+    "nyc": "^14.1.1"
+  }
+}

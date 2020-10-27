@@ -1,0 +1,113 @@
+@import (reference) './src/less/bc.less';
+
+/* =============================================================================
+
+  Up to date as of Ant v3.20.4 (19 July 2019)
+  Full variable set:
+    https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+
+============================================================================= */
+
+// The prefix to use on all css classes from ant.
+@ant-prefix: ant;
+// -------- Colors -----------
+@primary-color: @green;
+@info-color: @green;
+@success-color: @green;
+@processing-color: @green;
+@error-color: @red;
+@highlight-color: @red;
+@warning-color: #f0ad4e; // non-brand colour
+@normal-color: @pearl; // largely unused
+@white: #fff;
+
+// Color used by default to control hover and active backgrounds and for
+// alert info backgrounds.
+@primary-1: tint(@primary-color, 90%);
+@primary-2: tint(@primary-color, 80%);
+@primary-3: tint(@primary-color, 70%); // unused
+@primary-4: tint(@primary-color, 60%); // unused
+// color used to control the text color in many active and hover states,
+@primary-5: tint(@primary-color, 20%);
+// color used to control the text color of active buttons, don't use, use @primary-color
+@primary-6: @primary-color;
+@primary-7: shade(@primary-color, 5%);
+@primary-8: tint(@primary-color, 30%); // unused
+@primary-9: tint(@primary-color, 20%); // unused
+@primary-10: tint(@primary-color, 10%); // unused
+
+// Base Scaffolding Variables
+// ---
+
+// Background color for `<body>`
+@body-background: @white;
+@component-background: @white;
+@font-family: @font-family-sans-serif;
+@code-family: @font-family-monospace;
+@text-color: @black;
+
+// Unchanged - kept for easy lookup
+@background-color-light: hsv(
+  0,
+  0,
+  98%
+); // background of header and selected item
+@background-color-base: hsv(0, 0, 96%); // Default grey background color
+@background-color-zebra-odd: @component-background;
+@background-color-zebra-even: #fdfdfd;
+
+@border-radius-base: 0;
+@border-radius-sm: 0;
+
+// vertical paddings
+// Unchanged - kept here for easy lookup
+@padding-lg: 24px; // containers
+@padding-md: 16px; // small containers and buttons
+@padding-sm: 12px; // Form controls and items
+@padding-xs: 8px; // small items
+
+// vertical padding for all form controls
+// Unchanged - kept here for easy lookup
+@control-padding-horizontal: @padding-sm;
+@control-padding-horizontal-sm: @padding-xs;
+
+// LINK
+@link-color: @primary-color;
+@link-hover-color: tint(
+  @link-color,
+  40%
+); // color(~`colorPalette('@{link-color}', 5) `);
+@link-active-color: tint(
+  @link-color,
+  20%
+); // color(~`colorPalette('@{link-color}', 7) `);
+
+// Layout
+@layout-body-background: @body-background;
+
+// Input
+// Unchanged - kept here for easy lookup
+@input-padding-horizontal: @control-padding-horizontal - 1px;
+@input-padding-horizontal-base: @input-padding-horizontal;
+@input-padding-horizontal-sm: @control-padding-horizontal-sm - 1px;
+@input-padding-horizontal-lg: @input-padding-horizontal;
+
+// Animation
+@animation-duration-slow: 0.1s; // Modal
+@animation-duration-base: 0.1s;
+@animation-duration-fast: 0.1s; // Tooltip
+
+// Modal
+// --
+@modal-mask-bg: fade(@primary-color, 30%);
+
+// Table
+// --
+@table-row-hover-bg: @green-80;
+@table-padding-vertical: @padding-sm;
+@table-padding-horizontal: @padding-sm;
+
+// Card
+// ---
+@card-head-background: @background-color-light;
+@card-actions-background: @component-background;

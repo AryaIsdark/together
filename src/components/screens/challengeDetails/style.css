@@ -1,0 +1,57 @@
+.challenge-details {
+  height: 100vh;
+}
+
+.challenge-details .header {
+  height: 50%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.challenge-details .header .overlay {
+  background: linear-gradient(0deg, #000000, 60%, #ffffff78);
+  height: 100%;
+}
+
+.attendees-container {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+}
+
+.attendees-container .ant-avatar-image {
+  position: relative;
+  border: 2px solid white;
+  margin: -6px;
+  background: white;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 3px black;
+}
+
+.challenge-details .title-and-description {
+  position: relative;
+  top: 50%;
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.challenge-details .booking {
+  position: fixed;
+  background: transparent;
+  width: 100%;
+  top: 0;
+  z-index: 99999;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.challenge-details .event-information {
+  padding: 20px;
+}

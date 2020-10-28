@@ -3,7 +3,7 @@ import * as api from "api/apiFunctions";
 import { useParams } from "react-router-dom";
 
 const ScreenBook = () => {
-  const { id } = useParams();
+  const { id }: any = useParams();
   const [data, setdata] = useState({
     id: "",
     avatar: "",

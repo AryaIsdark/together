@@ -32,7 +32,7 @@
     "redux-devtools": "^3.5.0",
     "redux-thunk": "^2.3.0",
     "typecheck": "^0.1.2",
-    "typescript": "^3.6.4"
+    "typescript": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -57,7 +57,7 @@ const ChallengeDetailsheader = ({
 const ScreenChallengeDetails = () => {
   const loggedInUser = useSelector(userSelectors.data);
   const userBookings = useSelector(userSelectors.bookings);
-  const { id }: string = useParams();
+  const { id } = useParams();
 
   const [isBooking, setIsBooking] = useState(false);
   const [data, setdata] = useState({

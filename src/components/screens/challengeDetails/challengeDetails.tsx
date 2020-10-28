@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import * as api from "api/apiFunctions";
 import { useParams } from "react-router-dom";
 import "./style.css";
@@ -104,7 +104,7 @@ const ScreenChallengeDetails = () => {
     }
   };
 
-  const getData = async () => {
+  const getData = useCallback(async () => {
     try {
       setStatus("loading");
       const response = await api.getChallenge(id);
@@ -114,10 +114,11 @@ const ScreenChallengeDetails = () => {
     } catch (err) {
       setStatus("error");
     }
-  };
+  }, [id]);
+
   useEffect(() => {
     getData();
-  }, []);
+  }, [getData]);
 
   if (status === "loading") return <>loading</>;
   if (status === "error") return <>error</>;

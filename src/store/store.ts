@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware, compose, Store } from 'redux';
-import thunk from 'redux-thunk';
-import rootReducer from './rootReducer';
+import { createStore, applyMiddleware, compose, Store } from "redux";
+import thunk from "redux-thunk";
+import rootReducer from "./rootReducer";
 
 declare global {
   interface Window {
@@ -10,17 +10,17 @@ declare global {
 }
 
 const composeEnhancers =
-  process.env.NODE_ENV !== 'production'
+  process.env.NODE_ENV !== "production"
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
     : compose;
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(thunk)),
+  composeEnhancers(applyMiddleware(thunk))
 );
 
-if (process.env.NODE_ENV !== 'production') {
-  window.$store = store;
+if (process.env.NODE_ENV !== "production") {
+  // window.$store = store;
 }
 
 export default store;

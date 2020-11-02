@@ -2,57 +2,16 @@ import React, { useCallback, useEffect, useState } from "react";
 import * as api from "api/apiFunctions";
 import { useParams } from "react-router-dom";
 import "./style.css";
-import { Avatar, Button, Descriptions, notification } from "antd";
+import { Button, notification } from "antd";
 import moment from "moment";
 import { useSelector } from "react-redux";
 import * as userSelectors from "store/user/selectors";
+import EventInformation from "./eventInformation";
+import ChallengeDetailsheader from "./challengeDetailsHeader";
+import CompanyInformation from "./companyInformation";
 
 const isBookedByUser = (challengeId: string, userBookings: any) =>
   userBookings.some((booking: any) => booking.challengeId === challengeId);
-
-const EvenInformation = ({ data }: { data: any }) => {
-  return (
-    <Descriptions title="Event information" column={1} bordered>
-      <Descriptions.Item label="Price">{data.price}</Descriptions.Item>
-      <Descriptions.Item label="Date">
-        {moment(data.actionDate).format("YYYY-MM-DD")}
-      </Descriptions.Item>
-      <Descriptions.Item label="Time">18:00</Descriptions.Item>
-      <Descriptions.Item label="Address">Mock Address</Descriptions.Item>
-    </Descriptions>
-  );
-};
-
-export const Attendees = ({ data }: { data: any }) => {
-  return (
-    <>
-      {data &&
-        data.map((item: any) => <Avatar src={item.avatar} key={item.id} />)}
-    </>
-  );
-};
-
-const ChallengeDetailsheader = ({
-  data,
-  attendees,
-}: {
-  data: any;
-  attendees: any;
-}) => {
-  return (
-    <div style={{ backgroundImage: `url(${data.image})` }} className={"header"}>
-      <div className={"overlay"}>
-        <div className={"title-and-description"}>
-          <div className={"title-container"}>{data.title}</div>
-          <div className={"description-container"}>{data.description}</div>
-        </div>
-        <div className={"attendees-container"}>
-          <Attendees data={attendees} />
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const ScreenChallengeDetails = () => {
   const loggedInUser = useSelector(userSelectors.data);
@@ -68,6 +27,7 @@ const ScreenChallengeDetails = () => {
     price: 0,
     isBooked: false,
     attendees: null,
+    companyId: "",
   });
   const isAlreadyBooked = isBookedByUser(data.id, userBookings);
   const [attendees, setAttendees] = useState([]);
@@ -139,9 +99,13 @@ const ScreenChallengeDetails = () => {
           <Button type={"danger"}>Cancel Booking</Button>
         )}
       </div>
+
       <ChallengeDetailsheader data={data} attendees={attendees} />
-      <div className={"event-information"}>
-        <EvenInformation data={data} />
+      <div className={"section event-information"}>
+        <EventInformation data={data} />
+      </div>
+      <div className={"section organizer-information"}>
+        <CompanyInformation companyId={data.companyId} />
       </div>
     </div>
   );

@@ -28,6 +28,11 @@ const AppMenu = () => {
           <Avatar src={user.avatar} />
         </Link>
       </div>
+      <div className={"menu-item"}>
+        <Link to={"/event/create"}>
+          <Icon type="plus" />
+        </Link>
+      </div>
     </div>
   );
 };

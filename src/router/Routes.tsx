@@ -5,12 +5,14 @@ import PostDetails from "components/modules/postDetails/postDetails";
 import ScreenChallenges from "components/screens/challenges/challenges";
 import ScreenChallengeDetails from "components/screens/challengeDetails/challengeDetails";
 import ScreenProfile from "components/screens/profile/profile";
+import ScreenCreateChallenge from "components/screens/createChallenge/createChallenge";
 
 const Routes = () => {
   return (
     <Switch>
       <Route exact path="/challenges" component={ScreenChallenges} />
       <Route exact path="/challenges/:id" component={ScreenChallengeDetails} />
+      <Route exact path="/event/create" component={ScreenCreateChallenge} />
       <Route exact path="/profile" component={ScreenProfile} />
       <Route exact path="/posts" component={Posts} />
       <Route

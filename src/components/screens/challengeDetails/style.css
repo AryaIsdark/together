@@ -52,6 +52,14 @@
   align-items: center;
 }
 
-.challenge-details .event-information {
+.challenge-details .section {
   padding: 20px;
+}
+
+.challenge-details .organizer-content {
+  background: whitesmoke;
+  display: flex;
+  padding: 20px;
+  border-radius: 14px;
+  align-items: center;
 }

@@ -1,4 +1,4 @@
-import { api } from "./client";
+import { api, apiDictionary } from "./client";
 
 export const getPosts = (params: any = {}) => api.get<any>("/posts", params);
 
@@ -29,3 +29,13 @@ export const getLoggedInUser = (userId: string) =>
   api.get<any>(`/users/${userId}`);
 
 export const getCompany = (id: string) => api.get<any>(`/company/${id}`);
+
+// Dictionary APP
+const wordId = "hello";
+const fields = "definitions";
+const strictMatch = "false";
+
+export const translate = (word: string) =>
+  apiDictionary.get(
+    `entries/en-gb/${wordId}?fields=${fields}&strictMatch=${strictMatch}`
+  );

@@ -34,4 +34,12 @@ export const api = create({
   baseURL: "https://5eec9e025e298b0016b69f5d.mockapi.io/api/v1/",
 });
 
+export const apiDictionary = create({
+  baseURL: "https://od-api.oxforddictionaries.com/api/v2/",
+  headers: {
+    app_id: "a73d8c41",
+    app_key: "077582ff3bf2e5b888b1086bc077d04a",
+  },
+});
+
 api.addResponseTransform(createResponseTransform());

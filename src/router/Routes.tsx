@@ -10,6 +10,7 @@ import ScreenCreateChallenge from "components/screens/createChallenge/createChal
 const Routes = () => {
   return (
     <Switch>
+      <Route exact path="/" component={Posts} />
       <Route exact path="/challenges" component={ScreenChallenges} />
       <Route exact path="/challenges/:id" component={ScreenChallengeDetails} />
       <Route exact path="/event/create" component={ScreenCreateChallenge} />

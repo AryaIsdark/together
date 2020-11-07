@@ -38,6 +38,7 @@ const CompanyInformation = ({ companyId }: { companyId: string }) => {
           <Avatar src={data.avatar} />
           <div>{data.name}</div>
         </div>
+        <div className={"rating-content"}></div>
       </div>
     </>
   );

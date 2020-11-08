@@ -35,11 +35,7 @@ export const api = create({
 });
 
 export const apiDictionary = create({
-  baseURL: "https://od-api.oxforddictionaries.com/api/v2/",
-  headers: {
-    app_id: "a73d8c41",
-    app_key: "077582ff3bf2e5b888b1086bc077d04a",
-  },
+  baseURL: "https://waves-api-dev.herokuapp.com/api/v1",
 });
 
 api.addResponseTransform(createResponseTransform());

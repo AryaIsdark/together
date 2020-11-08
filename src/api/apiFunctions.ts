@@ -30,12 +30,5 @@ export const getLoggedInUser = (userId: string) =>
 
 export const getCompany = (id: string) => api.get<any>(`/company/${id}`);
 
-// Dictionary APP
-const wordId = "hello";
-const fields = "definitions";
-const strictMatch = "false";
-
 export const translate = (word: string) =>
-  apiDictionary.get(
-    `entries/en-gb/${wordId}?fields=${fields}&strictMatch=${strictMatch}`
-  );
+  apiDictionary.get(`/translate/${word}`);
